@@ -27,6 +27,7 @@ export default class Movie extends Component {
         console.error(error);
       });
   };
+
   componentWillReceiveProps(newProps) {
     if (this.props.match.params.id !== newProps.match.params.id) {
       this.fetchMovie(newProps.match.params.id);
